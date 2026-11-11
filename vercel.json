@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/",
@@ -9,17 +8,17 @@
           "value": "(?<subdomain>[^.]+)\\.prasanthkathi\\.in"
         }
       ],
-      "destination": "/sites/:subdomain/index.html"
+      "destination": "/sites/:subdomain/"
     },
     {
-      "source": "/:path*",
+      "source": "/((?!sites/).*)",
       "has": [
         {
           "type": "host",
           "value": "(?<subdomain>[^.]+)\\.prasanthkathi\\.in"
         }
       ],
-      "destination": "/sites/:subdomain/:path*"
+      "destination": "/sites/:subdomain/$1"
     }
   ]
 }
