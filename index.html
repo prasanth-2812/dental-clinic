@@ -2,6 +2,15 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        var h = window.location.hostname;
+        var p = h.split('.');
+        if (p.length >= 3 && p[0] !== 'www' && p[0] !== 'dental-clinic' && !h.includes('vercel.app')) {
+          window.location.replace('/sites/' + p[0] + '/');
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmileCraft Dental Clinic | Visakhapatnam</title>
